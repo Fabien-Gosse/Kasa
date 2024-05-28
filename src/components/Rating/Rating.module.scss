@@ -1,0 +1,25 @@
+.rating {
+    display: flex;
+    gap: 4px;
+    @media screen and (max-width : 720px) {
+        gap: 2px;
+    }
+    &__redStar {
+        color: #FF6060;
+        font-size: 1.7rem;
+        padding: 4.5px;
+        @media screen and (max-width : 720px) {
+            font-size: 0.915rem;
+            padding: 1.7px;
+        }
+    }
+    &__greyStar {
+        color: #E3E3E3;
+        font-size: 1.7rem;
+        padding: 4.5px;
+        @media screen and (max-width : 720px) {
+            font-size: 0.915rem;
+            padding: 1.7px;
+        }
+    }
+}

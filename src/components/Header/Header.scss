@@ -1,0 +1,64 @@
+@mixin nav-li-items {
+    font-size: 1.5rem;
+    margin: 0;
+    @media screen and (max-width : 720px) {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    &__container {
+        max-width: 1240px;
+        width: 100%;
+        margin-top: 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width : 1280px) {
+            margin: 45px 20px 0 20px;
+        }
+        @media screen and (max-width : 720px) {
+            margin: 20px 20px 0 20px;
+        }
+    }
+}
+
+.headerLogo {
+    @media (max-width : 720px) {
+        max-width: 145px;
+    }
+}
+
+.nav {
+    ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        margin: 0;
+        @media screen and (max-width : 720px) {
+            gap: 1.6rem;
+        }
+        .li {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            &__Link {
+                text-decoration: none;
+                color: #000000;
+                display:block;
+                @include nav-li-items()
+            }
+            &__apropos {
+                text-decoration: underline;
+                @include nav-li-items()
+            }
+            &__accueil {
+                text-decoration: underline;
+                @include nav-li-items()
+            }
+        }
+    }
+}

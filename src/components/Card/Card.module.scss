@@ -1,0 +1,29 @@
+.card {
+    position: relative;
+    aspect-ratio: 1;      
+    border-radius: 10px;
+    background: linear-gradient(to bottom,rgba(219, 219, 219, 0.1), rgba(0, 0, 0, 1));
+    @media screen and (max-width : 720px) {
+        aspect-ratio: 67/51;
+    }
+    &__img {
+        display: block;
+        max-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        opacity: 70%;
+    }
+    &__title {
+        margin: 0px;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1;
+        width: 88%;
+        color: white;
+        font-size: 1.125rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+    }
+}

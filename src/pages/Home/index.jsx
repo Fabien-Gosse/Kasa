@@ -1,17 +1,18 @@
-import Banner from '../../components/Banner'
+import BannerHome from '../../components/BannerHome'
 import CardGallery from '../../components/CardGallery'
+import styles from "./Home.module.scss"
 
 
 function Home() {
   return (
-    <div className="home">
-      <section className="banner">
-        <Banner />
+    <main className={styles.home}>
+      <section className={styles.banner}>
+        <BannerHome />
       </section>
-      <section className="cardGallery">
+      <section className={styles.cardGallery}>
         <CardGallery />
       </section>
-    </div>
+    </main>
   );
 }
 
