@@ -1,0 +1,21 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 43px;
+    margin: 12px 0;
+    @media screen and (max-width : 1280px) {
+        margin: 12px 20px;
+    }
+    @media screen and (max-width : 720px) {
+        margin: 8px 20px;
+        gap: 22px;
+    }
+    .banner {
+        width: 100%;
+        max-width: 1240px;
+    }
+    .cardGallery {
+        max-width: 1240px;
+    }
+}

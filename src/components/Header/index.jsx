@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import HeaderLogo from "../../assets/Kasa_logo_header.png"
 import { useLocation } from "react-router-dom"
+import './Header.scss'
 
 function Header() {
 
@@ -15,15 +16,17 @@ function Header() {
     }
 
     return (
-        <div className="header">
-            <img src={HeaderLogo} alt="logo Kasa rouge" className="headerLogo"/>
-            <nav className="nav">
-                <ul>            
-                <li className="li">{accueilLink ? <p className="li__accueil">Accueil</p> : <Link to="/" className="li__Link">Accueil</Link>}</li>
-                <li className="li">{aproposLink ? <p className="li__apropos">A Propos</p> : <Link to="/Apropos" className="li__Link">A Propos</Link>}</li>
-                </ul>
-            </nav>
-        </div>
+        <header className="header">
+            <div className='header__container'>
+                <img src={HeaderLogo} alt="logo Kasa rouge" className="headerLogo"/>
+                <nav className="nav">
+                    <ul>            
+                    <li className="li">{accueilLink ? <p className="li__accueil">Accueil</p> : <Link to="/" className="li__Link">Accueil</Link>}</li>
+                    <li className="li">{aproposLink ? <p className="li__apropos">A Propos</p> : <Link to="/Apropos" className="li__Link">A Propos</Link>}</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
     )
 }
 

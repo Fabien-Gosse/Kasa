@@ -1,20 +1,25 @@
-import React, {useState, useEffect} from 'react';
+import React, { useContext } from 'react';
 import Card from "../Card"
+import styles from './CardGallery.module.scss'
+import { DataContext } from '../../utils/context';
 
 function CardGallery () {
-    const [logements, setLogements] = useState([])
 
-    useEffect(
-        () => {
-        let ignore = false;
-        fetch("logements.json")
-            .then(response => response.json())
-            .then(data => {if(!ignore)setLogements(data);})
-            return () => {ignore=true};
-    },[])
+    let { logements } = useContext(DataContext);
+
+    if (logements.length !== 0) { 
+    sessionStorage.setItem("savedLogements", JSON.stringify(logements));
+    } else {
+        if(sessionStorage.getItem("savedLogements") !== 0) {
+            const dataSavedLogements = sessionStorage.getItem("savedLogements");
+            logements = JSON.parse(dataSavedLogements);
+        }
+    }
+
+    console.log(logements);
 
     return (
-    <div className="gallery">
+    <div className={styles.gallery}>
         {logements.map(logement => {
                 return (
                     <Card

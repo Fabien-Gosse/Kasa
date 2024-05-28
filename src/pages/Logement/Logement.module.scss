@@ -1,0 +1,118 @@
+.logements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px 0;
+    @media screen and (max-width : 1280px) {
+        margin: 12px 20px 0 20px;
+    }
+    @media screen and (max-width : 720px) {
+        margin: 6px 20px 0 20px;
+    }
+    &__slideshow {
+        max-width: 1240px;
+        width: 100%;
+    }
+    &__info {
+        max-width: 1240px;
+        width: 100%;
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width : 720px) {
+            flex-direction: column;
+            margin-top: 15px;
+        }
+    }
+    &__collapse {
+        max-width: 1240px;
+        width: 100%;
+        display: flex;
+        gap: 76px;
+        @media screen and (max-width : 720px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__description {
+            flex: 1;
+        }
+        &__equipment {
+            flex: 1;
+        }
+    }
+
+}
+
+.location {
+    &__title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 2.25rem;
+        color: #FF6060;
+        padding: 3.5px 0;
+        margin: 6px 0;
+        @media screen and (max-width : 720px) {
+            padding: 0px;
+            margin: 0px;
+            font-size: 1.125rem;
+        }
+    }
+    &__city {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 1.125rem;
+        margin: 5px 0;
+        @media screen and (max-width : 720px) {
+            font-size: 0.875rem;
+        }
+    }
+    &__tags {
+        display: flex;
+        gap: 10px;
+        margin: 20px 0 24px 0;
+        @media screen and (max-width : 720px) {
+            margin: 10px 0 16px 0;
+        }
+    }
+}
+
+.host {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    margin-bottom: 13px;
+    @media screen and (max-width : 720px) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__info {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        height: 64px;
+        @media screen and (max-width : 720px) {
+            height: 32px;
+        }
+        &__name {
+            max-width: 93px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 1.125rem;
+            text-align: right;
+            color: #FF6060;
+            margin: auto 0;
+            @media screen and (max-width : 720px) {
+                max-width: 60px;
+                font-size: 0.75rem;
+            }
+        }
+        &__picture {
+            width: 64px;
+            border-radius: 34px;
+            @media screen and (max-width : 720px) {
+                width: 32px;
+            }
+        }
+    }
+}
