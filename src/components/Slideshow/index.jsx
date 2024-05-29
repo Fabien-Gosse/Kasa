@@ -99,15 +99,3 @@ return (
 }
 
 export default Slideshow
-
-//translateX(${-100}%)
-
-//.animation = css`${slideRight} 0.4s ease-in-out`;
-
-/*const slideRight = css`
-animation: ${slideRightKey} 0.4s ease-in-out;
-`;
-
-const slideLeft = css`
-animation: ${slideLeftKey} 0.4s ease-in-out;
-`;*/

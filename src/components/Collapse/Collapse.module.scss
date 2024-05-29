@@ -22,6 +22,9 @@
         font-size: 0.75rem;
         padding-top: 13px;
     }
+    &__paragraph {
+        margin: 0px
+    }
     &__array {
         margin: 3.5px 0;
         @media screen and (max-width : 720px) {

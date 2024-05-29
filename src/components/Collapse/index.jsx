@@ -17,19 +17,19 @@ return (
             {isDescriptionVisible ? <FaChevronUp className={styles.collapse__container__chevronUp} onClick={showDescription}/> : <FaChevronUp className={styles.collapse__container__chevronDown} onClick={showDescription}/>}
         </div>
         <div className={styles.collapse__text}>
-            {isDescriptionVisible ? <p className={styles.collapse__text__descriptionShow}>
+            {isDescriptionVisible ? <div className={styles.collapse__text__descriptionShow}>
                 {Array.isArray(content) ? content.map((item, index) => {
                     return (
                         <p className={styles.collapse__text__descriptionShow__array} key={index}>{item}</p>
-                    )}): content 
+                    )}): <p className={styles.collapse__text__descriptionHidden__paragraph}>{content}</p>
                 }
-            </p> : <p className={styles.collapse__text__descriptionHidden}>
+            </div> : <div className={styles.collapse__text__descriptionHidden}>
                 {Array.isArray(content) ? content.map((item, index) => {
                     return (
                         <p className={styles.collapse__text__descriptionHidden__array} key={index}>{item}</p>
-                    )}) : content
+                    )}) : <p className={styles.collapse__text__descriptionHidden__paragraph}>{content}</p>
                 }
-            </p>}
+            </div>}
         </div>
     </article>
 )

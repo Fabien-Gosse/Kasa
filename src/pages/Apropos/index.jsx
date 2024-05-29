@@ -16,7 +16,6 @@ function Apropos() {
                 return (
                     <div className={styles.Apropos__collapses__container}>
                         <Collapse 
-                        key={collapseData.id}
                         title={collapseData.title}
                         content={collapseData.content}
                         />

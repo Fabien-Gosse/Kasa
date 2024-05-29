@@ -24,17 +24,22 @@ export const DataProvider = ({ children }) => {
         fetchLogement()
     }, [])*/
 
+
     useEffect(
         () => {
         let ignore = false;
-        fetch("logements.json")
-            .then(response => response.json())
-            .then(data => {if(!ignore)setLogements(data);})
+        fetch("/logements.json")
+            .then(response => {
+                console.log(response)
+                return response.json()
+            })
+            .then(data => { 
+            console.log(data)
+            if(!ignore)setLogements(data);})
             return () => {ignore=true};
-    },[])
+    },[]);
 
     console.log(logements);
-
 
     return (
         <DataContext.Provider value={{ logements }}>
