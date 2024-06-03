@@ -16,7 +16,7 @@ You may also see any lint errors in the console.
 
 ### Font Awesome free package needed
 
-# You need to install de free SVG package from front awesome, to see the icons
+# You need to install the free SVG package from front awesome, to see the icons
 
 `yarn add @fortawesome/fontawesome-svg-core`
 
