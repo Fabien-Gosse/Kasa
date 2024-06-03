@@ -1,7 +1,7 @@
+@import "../../utils/styles/mixins";
+
 .Apropos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include displayFlex(column, center);
     gap: 38px;
     @media screen and (max-width : 1280px) {
         margin: 0 20px;
@@ -11,14 +11,11 @@
         gap: 19px;
     }
     &__banner {
-        max-width: 1240px;
-        width: 100%;
+        @include maxWidth1240;
     }
     &__collapses {
-        max-width: 1240px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+        @include maxWidth1240;
+        @include displayFlex(column);
         gap: 30px;
         @media screen and (max-width : 720px) {
             gap: 20px;

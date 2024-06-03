@@ -1,3 +1,5 @@
+@import "../../utils/styles/variables";
+
 .error {
     display: flex;
     flex-direction: column;
@@ -16,13 +18,12 @@
     }
     &__text {
         display: inline;
-        font-family: "Montserrat", sans-serif;
         font-weight: 500;
         font-size: 2.25rem;
         margin: 0;
         width: 85vw;
         text-align: center;
-        color: #FF6060;
+        color: $secondary-color;
         @media screen and (max-width : 720px) {
             font-size: 1.125rem;
         }
@@ -31,7 +32,6 @@
         }
     }
     &__accueilLink {
-        font-family: "Montserrat", sans-serif;
         font-weight: 500;
         font-size: 1.125rem;
         text-align: center;

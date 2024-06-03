@@ -1,7 +1,8 @@
+@import "../../utils/styles/mixins";
+@import "../../utils/styles/variables";
+
 .logements {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include displayFlex (column, center);
     margin: 12px 0;
     @media screen and (max-width : 1280px) {
         margin: 12px 20px 0 20px;
@@ -10,23 +11,19 @@
         margin: 6px 20px 0 20px;
     }
     &__slideshow {
-        max-width: 1240px;
-        width: 100%;
+        @include maxWidth1240;
     }
     &__info {
-        max-width: 1240px;
-        width: 100%;
+        @include maxWidth1240;
+        @include displayFlex (row, normal, space-between);
         margin-top: 24px;
-        display: flex;
-        justify-content: space-between;
         @media screen and (max-width : 720px) {
             flex-direction: column;
             margin-top: 15px;
         }
     }
     &__collapse {
-        max-width: 1240px;
-        width: 100%;
+        @include maxWidth1240;
         display: flex;
         gap: 76px;
         @media screen and (max-width : 720px) {
@@ -40,15 +37,13 @@
             flex: 1;
         }
     }
-
 }
 
 .location {
     &__title {
-        font-family: "Montserrat", sans-serif;
         font-weight: 500;
         font-size: 2.25rem;
-        color: #FF6060;
+        color: $secondary-color;
         padding: 3.5px 0;
         margin: 6px 0;
         @media screen and (max-width : 720px) {
@@ -58,7 +53,6 @@
         }
     }
     &__city {
-        font-family: "Montserrat", sans-serif;
         font-weight: 500;
         font-size: 1.125rem;
         margin: 5px 0;
@@ -77,18 +71,14 @@
 }
 
 .host {
-    display: flex;
-    flex-direction: column;
+    @include displayFlex (column);
     gap: 26px;
     margin-bottom: 13px;
     @media screen and (max-width : 720px) {
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
+        @include displayFlex (row-reverse, center, space-between);
     }
     &__info {
-        display: flex;
-        justify-content: flex-end;
+        @include displayFlex (row, normal, flex-end);
         gap: 10px;
         height: 64px;
         @media screen and (max-width : 720px) {
@@ -96,11 +86,10 @@
         }
         &__name {
             max-width: 93px;
-            font-family: "Montserrat", sans-serif;
             font-weight: 500;
             font-size: 1.125rem;
             text-align: right;
-            color: #FF6060;
+            color: $secondary-color;
             margin: auto 0;
             @media screen and (max-width : 720px) {
                 max-width: 60px;

@@ -1,7 +1,7 @@
+@import "../../utils/styles/mixins";
+
 .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include displayFlex(column, center);
     gap: 43px;
     margin: 12px 0;
     @media screen and (max-width : 1280px) {
@@ -12,10 +12,9 @@
         gap: 22px;
     }
     .banner {
-        width: 100%;
-        max-width: 1240px;
+        @include maxWidth1240;
     }
     .cardGallery {
-        max-width: 1240px;
+        @include maxWidth1240 (auto);
     }
 }

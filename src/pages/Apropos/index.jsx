@@ -14,7 +14,7 @@ function Apropos() {
             <section className={styles.Apropos__collapses}>
             {aproposColData.map(collapseData => {
                 return (
-                    <div className={styles.Apropos__collapses__container}>
+                    <div className={styles.Apropos__collapses__container} key={collapseData.id}>
                         <Collapse 
                         title={collapseData.title}
                         content={collapseData.content}

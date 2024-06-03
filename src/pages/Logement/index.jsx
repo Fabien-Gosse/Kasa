@@ -13,9 +13,6 @@ import { Navigate } from "react-router-dom";
 function Logement() {
 
     let { logements } = useContext(DataContext);
-
-    console.log(logements);
-
     const { id } = useParams();
     
     if (logements.length !== 0) { 
