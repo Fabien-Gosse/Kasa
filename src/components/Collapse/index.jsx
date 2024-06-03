@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./Collapse.module.scss"
 import { FaChevronUp } from "react-icons/fa6";
 
-function Collapse ({id, title, content}) {
+function Collapse ({title, content}) {
 
     const [isDescriptionVisible, setIsDescritpionVisible] = useState(false);
 

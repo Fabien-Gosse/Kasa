@@ -1,3 +1,5 @@
+@import "../../utils/styles/variables";
+
 .rating {
     display: flex;
     gap: 4px;
@@ -5,7 +7,7 @@
         gap: 2px;
     }
     &__redStar {
-        color: #FF6060;
+        color: $secondary-color;
         font-size: 1.7rem;
         padding: 4.5px;
         @media screen and (max-width : 720px) {
@@ -14,7 +16,7 @@
         }
     }
     &__greyStar {
-        color: #E3E3E3;
+        color: $grey-star-color;
         font-size: 1.7rem;
         padding: 4.5px;
         @media screen and (max-width : 720px) {

@@ -7,17 +7,6 @@ function CardGallery () {
 
     let { logements } = useContext(DataContext);
 
-    /*if (logements.length !== 0) { 
-    sessionStorage.setItem("savedLogements", JSON.stringify(logements));
-    } else {
-        if(sessionStorage.getItem("savedLogements") !== 0) {
-            const dataSavedLogements = sessionStorage.getItem("savedLogements");
-            logements = JSON.parse(dataSavedLogements);
-        }
-    }*/
-
-    console.log(logements);
-
     return (
     <div className={styles.gallery}>
         {logements.map(logement => {

@@ -1,8 +1,10 @@
+@import "../../utils/styles/variables";
+
 .containerBanner {
     height: 223px;
     border-radius: 25px;
     margin: 0 auto;
-    background-color:  #000000;
+    background-color:  $black-color;
     @media screen and (max-width : 720px) {
         height: 111px;
     }

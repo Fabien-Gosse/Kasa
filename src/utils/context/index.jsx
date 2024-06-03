@@ -6,40 +6,17 @@ export const DataProvider = ({ children }) => {
 
     const [logements, setLogements] = useState([])
 
-    /*useEffect(() => {
-        async function fetchLogement() {
-            let ignore = false;
-            try{
-                const response = await fetch("logements.json")
-                const { logements } = await response.json()
-                if(!ignore)setLogements(logements);
-            }
-            catch(error) {
-                console.log(error)
-            }
-            finally {
-                return () => {ignore=true};
-            }
-        };
-        fetchLogement()
-    }, [])*/
-
-
     useEffect(
         () => {
         let ignore = false;
         fetch("/logements.json")
             .then(response => {
-                console.log(response)
                 return response.json()
             })
             .then(data => { 
-            console.log(data)
             if(!ignore)setLogements(data);})
             return () => {ignore=true};
     },[]);
-
-    console.log(logements);
 
     return (
         <DataContext.Provider value={{ logements }}>

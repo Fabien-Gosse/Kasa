@@ -1,57 +1,22 @@
-@mixin chevron {
-    width: 27.5px;
-    height : 27.5px;
-    color: #FFFFFF;
-    cursor: pointer;
-    transition: transform 400ms ease-in-out;
-    @media screen and (max-width : 720px) {
-        width: 18.3px;
-        height: 18.3px;
-    }
-}
-
-@mixin description {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.125rem;
-    background-color: #F6F6F6;
-    margin: 0;
-    margin-bottom: 0;
-    padding: 20px;
-    transform-origin: top;
-    @media screen and (max-width : 720px) {
-        font-size: 0.75rem;
-        padding-top: 13px;
-    }
-    &__paragraph {
-        margin: 0px
-    }
-    &__array {
-        margin: 3.5px 0;
-        @media screen and (max-width : 720px) {
-            margin: 1.75px 0;
-        }
-    }
-}
+@import "../../utils/styles/mixins";
+@import "../../utils/styles/variables";
 
 .collapse {
     &__container {
+        @include displayFlex(row, center, space-between);
         box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         height: 52px;
         border-radius: 5px;
-        background-color: #FF6060;
+        background-color: $secondary-color;
         padding: 10px 20px 10px 15px;
         @media screen and (max-width : 720px) {
             height: 30px;
         }
         &__title {
             margin: 0;
-            font-family: "Montserrat", sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: #FFFFFF;
+            color: $primary-color;
             @media screen and (max-width : 720px) {
                 font-size: 0.8125rem;
             }

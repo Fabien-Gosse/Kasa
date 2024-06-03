@@ -1,0 +1,70 @@
+@import "../../utils/styles/variables";
+
+@mixin displayFlex ($direction: row, $align: normal, $justify: normal) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin maxWidth1240 ($width: 100%) {
+    max-width: 1240px;
+    width : $width;
+}
+
+@mixin chevronSlideshow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    height: 92px;
+    width: 92px;
+    color: white;
+    cursor: pointer;
+    @media screen and (max-width : 720px) {
+        height: 23px;
+        width: 23px;
+    }
+}
+
+@mixin nav-li-items {
+    font-size: 1.5rem;
+    margin: 0;
+    @media screen and (max-width : 720px) {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+    }
+}
+
+@mixin chevron {
+    width: 27.5px;
+    height : 27.5px;
+    color: $primary-color;
+    cursor: pointer;
+    transition: transform 400ms ease-in-out;
+    @media screen and (max-width : 720px) {
+        width: 18.3px;
+        height: 18.3px;
+    }
+}
+
+@mixin description {
+    font-size: 1.125rem;
+    background-color: $tertiary-color;
+    margin: 0;
+    margin-bottom: 0;
+    padding: 20px;
+    transform-origin: top;
+    @media screen and (max-width : 720px) {
+        font-size: 0.75rem;
+        padding-top: 13px;
+    }
+    &__paragraph {
+        margin: 0px
+    }
+    &__array {
+        margin: 3.5px 0;
+        @media screen and (max-width : 720px) {
+            margin: 1.75px 0;
+        }
+    }
+}
