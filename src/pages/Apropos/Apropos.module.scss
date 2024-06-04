@@ -3,6 +3,7 @@
 .Apropos {
     @include displayFlex(column, center);
     gap: 38px;
+    height: 100%;
     @media screen and (max-width : 1280px) {
         margin: 0 20px;
     }
