@@ -2,20 +2,20 @@
 
 html {
     font-size: 16px;
+    height: 100%;
 }
 
 body {
     font-family: "Montserrat", sans-serif;
-}
-
-body {
     margin: 0;
+    height: 100%;
 }
 
 #root {
     display: flex;
     flex-direction: column;
     gap: 38px;
+    height: 100%;
     @media screen and (max-width : 720px) {
         gap: 19px;
     }
